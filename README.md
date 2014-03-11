@@ -35,12 +35,12 @@ run "cat < /tmp/cmuslyricspipe" every one second.
 How It Works
 ------------
 
-A separated thread periodically grab status information of cmus by calling 
+This daemon process periodically grabs status information of cmus by calling 
 "cmus-remote -Q". It uses the file path information given by cmus-remote to 
-form the path of the lrc file. If the path is different from the last one 
+form the path of the lrc file. If this path is different from the current path 
 being stored and a file exists at that path, the file will be loaded into the 
-Lyrics object. The thread will pass current time position to the object and 
-the lyrics at that time will be returned and printed on the window.
+Lyrics object. This process will pass current time position to the object and 
+the lyrics at / near that time will be returned and sent through the pipe.
 
 Classes Implemented
 -------------------
