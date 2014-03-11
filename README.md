@@ -24,7 +24,7 @@ second, while the min precision of lrc is one centisecond, this difference
 may make the timing of the lyrics slightly imprecise, but it is not a serious
 problem since there are five lines being shown at the same time.
 
-Work with GeekTool
+Working with GeekTool
 ------------------
 
 ![ScreenShot](https://raw.github.com/equinox1993/CMUS-Lyrics-Daemon/master/screenshot.png)
