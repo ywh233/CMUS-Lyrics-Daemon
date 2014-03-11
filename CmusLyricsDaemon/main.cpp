@@ -74,10 +74,10 @@ int main(int argc, const char * argv[])
 		if (newFile.compare(currentFile) != 0) { // different file
 			bool err = false;
 			std::string lrcCode = get_file_contents(newFile.c_str(), &err);
-			if (err) {
+			if (err) { // file not found
 				lrcLoaded = false;
 				currentFile = newFile;
-				writeToPipe(pipePath, "");
+				writeToPipe(pipePath, ""); // writes an empty string
 				continue;
 			}
 			lrc->reset(lrcCode, true);
