@@ -27,7 +27,7 @@ problem since there are five lines being shown at the same time.
 Work with GeekTool
 ------------------
 
-![ScreenShot](https://raw.github.com/equinox1993/CmusLyricsDaemon/master/screenshot.png)
+![ScreenShot](https://raw.github.com/equinox1993/CMUS-Lyrics-Daemon/master/screenshot.png)
 
 If the FIFO pipe used by the daemon is */tmp/cmuslyricspipe*, let GeekTool 
 run "cat < /tmp/cmuslyricspipe" every one second.
