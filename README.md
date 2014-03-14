@@ -32,7 +32,7 @@ Working with GeekTool
 If the FIFO pipe used by the daemon is */tmp/cmuslyricspipe*, let GeekTool 
 run "cat < /tmp/cmuslyricspipe" every one second. For convenience, you may want
 to add an alias like this to .bash_profile:  
-alias cmus-lyrics="/*folder path*/CmusLyricsDaemon 500 3 /*lyrics path*/ /usr/local/bin/cmus-remote /tmp/cmuslyricspipe &"
+*alias cmus-lyrics="/**folder path**/CmusLyricsDaemon 500 3 /**lyrics path**/ /usr/local/bin/cmus-remote /tmp/cmuslyricspipe &"*
 
 How It Works
 ------------
