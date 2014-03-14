@@ -30,7 +30,9 @@ Working with GeekTool
 ![ScreenShot](https://raw.github.com/equinox1993/CMUS-Lyrics-Daemon/master/screenshot.png)
 
 If the FIFO pipe used by the daemon is */tmp/cmuslyricspipe*, let GeekTool 
-run "cat < /tmp/cmuslyricspipe" every one second.
+run "cat < /tmp/cmuslyricspipe" every one second. For convenience, you may want
+to add an alias like this to .bash_profile:  
+alias cmus-lyrics="/*folder path*/CmusLyricsDaemon 500 3 /*lyrics path*/ /usr/local/bin/cmus-remote /tmp/cmuslyricspipe &"
 
 How It Works
 ------------
@@ -45,7 +47,7 @@ the lyrics at / near that time will be returned and sent through the pipe.
 Classes Implemented
 -------------------
 
-Lyrics:
+Lyrics:  
 Line A is consider as the current lyrics if current time position is between 
 A (inclusive) and B (exclusive).
 A class that loads the lrc code into a string vector that stores the lines of 
@@ -54,7 +56,7 @@ lyrics and an integer time array that stores the relations from time
 10 min * 60 min/sec * 100 centisec/sec * 2 bytes/short = 117 kb; searching for 
 lyrics at any time positions will be constant time operation.
 
-CmusStatus:
+CmusStatus:  
 A class that grabs status information from cmus-remote.
 
 These two classes are written in C++ so they can be used in any other projects
